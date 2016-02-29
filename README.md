@@ -1,44 +1,40 @@
-QordobaLib
-=================
-Qordoba’s Java SDK offers platform-specific features that make the Qordoba implementation much simpler. The SDKs are open-source, and can be forked at the links below. Once forked, you can integrate our API into your application.
+---
+title: Python SDK for l10n
+layout: api
+---
 
-Due to the UniRest package dependency this SDK only works under Python 2.7
-It will not work using Python 3.x
+# Python SDK
 
-How To Configure:
-=================
-The code might need to be configured with your API credentials. To do that,
-provide the credentials and configuration values as constructor parameters for the controllers
+Qordoba’s Python SDK offers platform-specific features that make the Qordoba API implementation much simpler. The SDK allows you to integrate our API with your application without worrying about low-level API details. Our Python SDK is open-source and can be forked at the link below. Once forked and configured, you will be able to easily integrate our API into your application.
 
-How To Build: 
-=============
-The code uses Python libraries named UniRest and Jsonpickle. 
+### Get the SDK:
 
-PIP is a popular tool for managing python packages[1].
-To resolve these packages:
-1) From terminal/cmd navigate to the root directory
-2) Invoke 'pip install -r requirements.txt'
+Download the Python API SDK from [GitHub](https://github.com/Qordobacode/api-sdk-python).
 
-Note: You will need internet access to resolve these dependencies.
+To clone the repo: `git clone git@github.com:Qordobacode/api-sdk-python.git`.
 
-How To Use:
-===========
-The following shows how to make invoke the QordobaController controller.
-It is also shown in [2].
 
-    1. Create a "QordobaControllerTest.py" file in the root directory.
-    2. Add the following import statement 
-        'from QordobaLib.Controllers.QordobaController import *'
-    3. Create a new instance using 'controller = QordobaController()'
-    4. Invoke an endpoint with the appropriate parameters, for example
-        'response = controller.create_projects(<required parameters if any>)'
-    5. "response" will now be an object of type Void.
 
-[1] PIP - https://pip.pypa.io
+###How to install via PIP: 
 
-[2] from QordobaLib.Controllers.QordobaController import *
+* From terminal/cmd navigate to the root directory
+* Invoke `'pip install -r requirements.txt'`
+* Create a "QordobaControllerTest.py" file in the root directory
+* Add the following import statement:
+        `'from QordobaLib.Controllers.QordobaController import *'`
+* Create a new instance using `'controller = QordobaController()'`
+* Invoke an endpoint with the appropriate parameters, for example:
+        `'response = controller.create_projects(<required parameters if any>)'`
+* `response` will now be an object of type Void.
 
-	controller = QordobaController()
-    response = controller.create_projects()
+The SDK uses the Python libraries [UniRest](http://unirest.io/python.html) and [Jsonpickle](https://jsonpickle.github.io/). 
 
-    print response
+### Bug reports
+Have a bug? Please create an issue [here](https://github.com/Qordobacode/api-sdk-python/issues) on GitHub! 
+
+
+
+
+### License
+The MIT License (MIT)
+
